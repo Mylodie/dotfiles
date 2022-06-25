@@ -177,13 +177,16 @@ augroup END
 
 
 " 设置黑色背景
-set background=dark
+" set background=dark
 
 " 允许 256 色
 set t_Co=256
 
+" 设置可视化模式被选颜色
+:hi Visual term=reverse cterm=reverse guibg=Grey
+
 " 设置颜色主题，会在所有 runtimepaths 的 colors 目录寻找同名配置
-color darkblue
+" color darkblue
 
 " 状态栏设置
 set statusline=                                 " 清空状态了
@@ -217,9 +220,9 @@ endif
 " 去掉 sign column 的白色背景
 hi! SignColumn guibg=NONE ctermbg=NONE
 
-" 修改行号为浅灰色，默认主题的黄色行号很难看，换主题可以仿照修改
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE 
-	\ gui=NONE guifg=DarkGrey guibg=NONE
+" 修改行号为白色
+highlight LineNr term=bold cterm=NONE ctermfg=White ctermbg=NONE 
+	\ gui=NONE guifg=White guibg=NONE
 
 " 修正补全目录的色彩：默认太难看
 hi! Pmenu guibg=gray guifg=black ctermbg=gray ctermfg=black
