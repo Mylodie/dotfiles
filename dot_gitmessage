@@ -1,0 +1,20 @@
+# Title: <type>(optional scope): <description>
+# type: fix(PATCH) feat(MINOR) perf style refactor test ci docs chore release + [!(BREAKING CHANGE)]
+# No more than 50 chars. #### 50 chars is here:  #
+
+# Remember blank line between title and body.
+
+# Body: Explain *what* and *why* (not *how*). Include task ID (Jira issue).
+# Wrap at 72 chars. ################################## which is here:  #
+
+
+# Footer: Include at least one empty line before it.
+# BREAKING CHANGE: <breaking change summary>
+#
+# <breaking change description + migration instructions>
+#
+#
+# Co-authored-by: name <user@users.noreply.github.com>
+# Reviewed-by: Z
+# Refs/Fixes: #123
+#
