@@ -1,0 +1,30 @@
+{
+    "title": "control_switch_input",
+    "rules": [
+          {
+        "description": "Change left ctrl to ctrl + spacebar.",
+        "manipulators": [
+          {
+            "from": {
+              "key_code": "left_control"
+            },
+            "to": [
+              {
+                "key_code": "left_control"
+              }
+            ],
+            "to_if_alone": [
+              {
+                "key_code": "spacebar",
+                "modifiers": [
+                  "left_control"
+                ]
+              }
+            ],
+            "type": "basic"
+          }
+        ]
+      }
+    ]
+  }
+  

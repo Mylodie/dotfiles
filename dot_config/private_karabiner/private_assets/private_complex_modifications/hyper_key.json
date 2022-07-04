@@ -1,0 +1,31 @@
+{
+    "title": "hyper_key",
+    "rules": [
+        {
+            "description": "Change right option to command+control+option+shift.",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "right_option",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift",
+                            "modifiers": [
+                                "left_control",
+                                "left_option",
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}

@@ -76,6 +76,7 @@ plugins=(
     command-not-found
     rsync
     z
+	tmux
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -109,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR='vim'
+set -o vi
 
 alias la='exa -lghHa --group-directories-first --icons'
 alias ll='exa -lghH --group-directories-first --icons'
