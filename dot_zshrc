@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+export LANG=en_US.UTF-8
 export EDITOR='vim'
 set -o vi
 
@@ -118,5 +118,16 @@ alias tree="exa -T --group-directories-first --icons"
 
 cl() { cd "$@" && exa -lbF --git --icons; }
 
-[ -f $HOME/.host_zshrc ] && source $HOME/.host_zshrc
+lg()
+{
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
 
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+
+[ -f $HOME/.host_zshrc ] && source $HOME/.host_zshrc
